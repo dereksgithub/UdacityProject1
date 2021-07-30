@@ -11,9 +11,14 @@ fixing missing values etc.
 Basic data visualization for overview of the dataset
 
 ## Answering the business questions
-1. 
-2. sasd
-3.
+#### Business Questions:
+1. Are are the top 10 key factors that affect salary?
+
+2. Job satisfication and boot camp? Does bootcamp have anything to do with job satisfication?
+
+3. Education and cousin education/ etc?
+
+
 
 ## Conclusion
 More details please refer to the github blog
