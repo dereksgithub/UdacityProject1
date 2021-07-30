@@ -18,6 +18,22 @@ Basic data visualization for overview of the dataset
 
 3. Education and cousin education/ etc?
 
+## With the new design
+
+#### Main Function
+This is the function that calls the cleaning functions for each year's survey response data.
+The word cloud function will be implemented here.
+
+#### Visualization Block
+Perform basic visualizations of the dataset.
+
+#### Statistics Block
+Summarize the cleaned datasets,
+
+#### Wrangling Block
+Cleans the dataset year by year.
+
+
 
 
 ## Conclusion
