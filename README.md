@@ -12,11 +12,13 @@ Basic data visualization for overview of the dataset
 
 ## Answering the business questions
 #### Business Questions:
-1. Are are the top 10 key factors that affect salary?
+1. Are are the most important factors that affect salary? Within the US, will salary affect the level of job
+satisfaction? 
 
-2.  Does bootcamp have anything to do with job satisfication?
+2. Does going to programming bootcamps have anything to do with job satisfication?
 
 3. Over the years, what are the most popular programming languages?
+
 
 ## With the new design
 
