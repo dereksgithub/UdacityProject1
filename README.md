@@ -14,9 +14,9 @@ Basic data visualization for overview of the dataset
 #### Business Questions:
 1. Are are the top 10 key factors that affect salary?
 
-2. Job satisfication and boot camp? Does bootcamp have anything to do with job satisfication?
+2.  Does bootcamp have anything to do with job satisfication?
 
-3. Education and cousin education/ etc?
+3. Over the years, what are the most popular programming languages?
 
 ## With the new design
 
