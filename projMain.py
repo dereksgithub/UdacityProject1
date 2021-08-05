@@ -15,7 +15,10 @@ df17 = cleaningDataframes.clean2017data()
 df18 = cleaningDataframes.clean2018data()
 df19 = cleaningDataframes.clean2019data()
 df20 = cleaningDataframes.clean2020data()
+
 statFunction.listAvg()
+
+
 visualizationModule.listBasicViz()
 
 # basic statistics and visualizations:
