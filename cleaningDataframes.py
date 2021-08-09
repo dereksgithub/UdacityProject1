@@ -24,12 +24,12 @@ def clean2011data(df11, questionoption2011):
             lambda x: ';'.join(x.dropna().astype(str)),
             axis=1)
         # rename the merged column
-        dfout = pd.DataFrame(df11['Prog_languages'])
+        dfout11 = pd.DataFrame(df11['Prog_languages'])
         # add the 2011 year column
-        dfout['Year'] = '2011'
+        dfout11['Year'] = '2011'
         # testing
-        # print(dfout)
-        return dfout
+        # print(dfout11)
+        return dfout11
 
 
 def clean2012data(df12, questionoption2012):
@@ -50,12 +50,12 @@ def clean2012data(df12, questionoption2012):
             lambda x: ';'.join(x.dropna().astype(str)),
             axis=1)
         # rename the merged column
-        dfout = pd.DataFrame(df12['Prog_languages'])
+        dfout12 = pd.DataFrame(df12['Prog_languages'])
         # add the 2012 year column
-        dfout['Year'] = '2012'
+        dfout12['Year'] = '2012'
         # testing
-        # print(dfout)
-        return dfout
+        # print(dfout12)
+        return dfout12
 
 
 def clean2013data(df13, questionoption2013):
@@ -76,12 +76,12 @@ def clean2013data(df13, questionoption2013):
             lambda x: ';'.join(x.dropna().astype(str)),
             axis=1)
         # rename the merged column
-        dfout = pd.DataFrame(df13['Prog_languages'])
+        dfout13 = pd.DataFrame(df13['Prog_languages'])
         # add the 2013 year column
-        dfout['Year'] = '2013'
+        dfout13['Year'] = '2013'
         # testing
-        # print(dfout)
-        return dfout
+        # print(dfout13)
+        return dfout13
 
 
 def clean2014data(df14, questionoption2014):
@@ -102,12 +102,12 @@ def clean2014data(df14, questionoption2014):
             lambda x: ';'.join(x.dropna().astype(str)),
             axis=1)
         # rename the merged column
-        dfout = pd.DataFrame(df14['Prog_languages'])
+        dfout14 = pd.DataFrame(df14['Prog_languages'])
         # add the 2014 year column
-        dfout['Year'] = '2014'
+        dfout14['Year'] = '2014'
         # testing
-        print(dfout)
-        return dfout
+        # print(dfout14)
+        return dfout14
 
 
 def clean2015data(df15, questionoption2015):
@@ -123,10 +123,22 @@ def clean2015data(df15, questionoption2015):
     elif questionoption2015 == 2:
         print("question2")
     else:
-
-
-        print("question3")
-
+        # sort out all columns that contains languages amd merge them into one col
+        df15['Prog_languages'] = df15[df15.columns[10:50]].apply(
+            lambda x: ';'.join(x.dropna().astype(str)),
+            axis=1)
+        # Rename the column header
+        dfout15 = pd.DataFrame(df15['Prog_languages'])
+        # add the year 2015 column
+        dfout15['Year'] = '2015'
+        # testing
+        # print(dfout15)
+        # 2015 data row 0 is not meaningful, remove row 0
+        dfout15 = dfout15.drop([0])
+        # testing code
+        print(dfout15)
+        # return the cleaned dataset
+        return dfout15
 
 def clean2016data(df16, questionoption2016):
     # display the reminder that the program has started
