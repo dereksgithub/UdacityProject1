@@ -54,7 +54,7 @@ def clean2012data(df12, questionOption2012):
         # add the 2012 year column
         dfout['Year'] = '2012'
         # testing
-        print(dfout)
+        # print(dfout)
         return dfout
 
 
@@ -71,8 +71,17 @@ def clean2013data(df13, questionOption2013):
     elif questionOption2013 == 2:
         print("question2")
     else:
-        print("question3")
-
+        # sort out all columns that contains languages amd merge them into one col
+        df13['Prog_languages'] = df13[df13.columns[57:70]].apply(
+            lambda x: ';'.join(x.dropna().astype(str)),
+            axis=1)
+        # rename the merged column
+        dfout = pd.DataFrame(df13['Prog_languages'])
+        # add the 2013 year column
+        dfout['Year'] = '2013'
+        # testing
+        print(dfout)
+        return dfout
 
 def clean2014data(df14, questionOption2014):
     # display the reminder that the program has started
