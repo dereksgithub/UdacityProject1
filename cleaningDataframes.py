@@ -28,7 +28,7 @@ def clean2011data(df11, questionoption2011):
         dfout['Year'] = '2011'
         # testing
         # print(dfout)
-        return(dfout)
+        return dfout
 
 
 
@@ -55,7 +55,7 @@ def clean2012data(df12, questionOption2012):
         dfout['Year'] = '2012'
         # testing
         print(dfout)
-        return (dfout)
+        return dfout
 
 
 def clean2013data(df13, questionOption2013):
