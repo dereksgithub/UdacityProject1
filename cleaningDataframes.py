@@ -2,6 +2,7 @@
 import numpy as np
 import pandas as pd
 
+
 def clean2011data(df11, questionoption2011):
     # display the reminder that the program has started
     print("extracting data from the 2011 survey data")
@@ -31,18 +32,17 @@ def clean2011data(df11, questionoption2011):
         return dfout
 
 
-
-def clean2012data(df12, questionOption2012):
+def clean2012data(df12, questionoption2012):
     # display the reminder that the program has started
     print("extracting data from the 2012 survey data")
     # place holder
-    #print(df12)
+    # print(df12)
 
     # option = 1 means we use the cleaning function to clean the dataframe and get information needed to answer business
     # question 1
-    if questionOption2012 == 1:
+    if questionoption2012 == 1:
         print("question1")
-    elif questionOption2012 == 2:
+    elif questionoption2012 == 2:
         print("question2")
     else:
         # here we take the columns that contains languages merge columns
@@ -58,7 +58,7 @@ def clean2012data(df12, questionOption2012):
         return dfout
 
 
-def clean2013data(df13, questionOption2013):
+def clean2013data(df13, questionoption2013):
     # display the reminder that the program has started
     print("extracting data from the 2013 survey data")
     # place holder
@@ -66,9 +66,9 @@ def clean2013data(df13, questionOption2013):
 
     # option = 1 means we use the cleaning function to clean the dataframe and get information needed to answer business
     # question 1
-    if questionOption2013 == 1:
+    if questionoption2013 == 1:
         print("question1")
-    elif questionOption2013 == 2:
+    elif questionoption2013 == 2:
         print("question2")
     else:
         # sort out all columns that contains languages amd merge them into one col
@@ -83,17 +83,18 @@ def clean2013data(df13, questionOption2013):
         # print(dfout)
         return dfout
 
-def clean2014data(df14, questionOption2014):
+
+def clean2014data(df14, questionoption2014):
     # display the reminder that the program has started
     print("extracting data from the 2014 survey data")
     # place holder
-    print(df14)
+    # print(df14)
 
     # option = 1 means we use the cleaning function to clean the dataframe and get information needed to answer business
     # question 1
-    if questionOption2014 == 1:
+    if questionoption2014 == 1:
         print("question1")
-    elif questionOption2014 == 2:
+    elif questionoption2014 == 2:
         print("question2")
     else:
         # sort out all columns that contains languages amd merge them into one col
@@ -109,7 +110,7 @@ def clean2014data(df14, questionOption2014):
         return dfout
 
 
-def clean2015data(df15, questionOption2015):
+def clean2015data(df15, questionoption2015):
     # display the reminder that the program has started
     print("extracting data from the 2015 survey data")
     # place holder
@@ -117,15 +118,17 @@ def clean2015data(df15, questionOption2015):
 
     # option = 1 means we use the cleaning function to clean the dataframe and get information needed to answer business
     # question 1
-    if questionOption2015 == 1:
+    if questionoption2015 == 1:
         print("question1")
-    elif questionOption2015 == 2:
+    elif questionoption2015 == 2:
         print("question2")
     else:
+
+
         print("question3")
 
 
-def clean2016data(df16, questionOption2016):
+def clean2016data(df16, questionoption2016):
     # display the reminder that the program has started
     print("extracting data from the 2016 survey data")
     # place holder
@@ -133,15 +136,15 @@ def clean2016data(df16, questionOption2016):
 
     # option = 1 means we use the cleaning function to clean the dataframe and get information needed to answer business
     # question 1
-    if questionOption2016 == 1:
+    if questionoption2016 == 1:
         print("question1")
-    elif questionOption2016 == 2:
+    elif questionoption2016 == 2:
         print("question2")
     else:
         print("question3")
 
 
-def clean2017data(df17, questionOption2017):
+def clean2017data(df17, questionoption2017):
     # display the reminder that the program has started
     print("extracting data from the 2017 survey data")
     # place holder
@@ -149,15 +152,15 @@ def clean2017data(df17, questionOption2017):
 
     # option = 1 means we use the cleaning function to clean the dataframe and get information needed to answer business
     # question 1
-    if questionOption2017 == 1:
+    if questionoption2017 == 1:
         print("question1")
-    elif questionOption2017 == 2:
+    elif questionoption2017 == 2:
         print("question2")
     else:
         print("question3")
 
 
-def clean2018data(df18, questionOption2018):
+def clean2018data(df18, questionoption2018):
     # display the reminder that the program has started
     print("extracting data from the 2018 survey data")
     # place holder
@@ -165,15 +168,15 @@ def clean2018data(df18, questionOption2018):
 
     # option = 1 means we use the cleaning function to clean the dataframe and get information needed to answer business
     # question 1
-    if questionOption2018 == 1:
+    if questionoption2018 == 1:
         print("question1")
-    elif questionOption2018 == 2:
+    elif questionoption2018 == 2:
         print("question2")
     else:
         print("question3")
 
 
-def clean2019data(df19, questionOption2019):
+def clean2019data(df19, questionoption2019):
     # display the reminder that the program has started
     print("extracting data from the 2019 survey data")
     # place holder
@@ -181,15 +184,15 @@ def clean2019data(df19, questionOption2019):
 
     # option = 1 means we use the cleaning function to clean the dataframe and get information needed to answer business
     # question 1
-    if questionOption2019 == 1:
+    if questionoption2019 == 1:
         print("question1")
-    elif questionOption2019 == 2:
+    elif questionoption2019 == 2:
         print("question2")
     else:
         print("question3")
 
 
-def clean2020data(df20, questionOption2020):
+def clean2020data(df20, questionoption2020):
     # display the reminder that the program has started
     print("extracting data from the 2020 survey data")
     # place holder
@@ -197,9 +200,9 @@ def clean2020data(df20, questionOption2020):
 
     # option = 1 means we use the cleaning function to clean the dataframe and get information needed to answer business
     # question 1
-    if questionOption2020 == 1:
+    if questionoption2020 == 1:
         print("question1")
-    elif questionOption2020 == 2:
+    elif questionoption2020 == 2:
         print("question2")
     else:
         print("question3")
