@@ -11,7 +11,7 @@ df12 = pd.read_csv("2012 Stack Overflow Survey Responses.csv", encoding='latin-1
 df13 = pd.read_csv("2013 Stack Overflow Survey Responses.csv", encoding='latin-1', dtype='unicode')
 df14 = pd.read_csv("2014 Stack Overflow Survey Responses.csv", encoding='latin-1', dtype='unicode')
 df15 = pd.read_csv("2015 Stack Overflow Survey Responses.csv", encoding='latin-1', dtype='unicode')
-df16 = 2016
+df16 = pd.read_csv("2016 Stack Overflow Survey Responses.csv", encoding='latin-1', dtype='unicode')
 df17 = 2017
 df18 = 2018
 df19 = 2019
@@ -42,7 +42,6 @@ df18q2 = cleaningDataframes.clean2018data(df18, 2)
 df19q2 = cleaningDataframes.clean2019data(df19, 2)
 df20q2 = cleaningDataframes.clean2020data(df20, 2)
 
-
 # options 3 get the data from each year for business question 3
 # 2011 Cleaning function ready
 # df11q3 = cleaningDataframes.clean2011data(df11, 3)
@@ -57,7 +56,6 @@ df18q3 = cleaningDataframes.clean2018data(df18, 3)
 df19q3 = cleaningDataframes.clean2019data(df19, 3)
 df20q3 = cleaningDataframes.clean2020data(df20, 3)
 
-
 # merge 11 to 20 dataframes for analysis over 10 years
 
 # for question 1:
@@ -67,12 +65,12 @@ df20q3 = cleaningDataframes.clean2020data(df20, 3)
 # for question 3:
 
 
-
 # perform basid statistical analysis on each combined dataframe:
 statFunction.listAvg()
 
+visualizationModule.list_basic_viz()
 
-visualizationModule.listBasicViz()
+visualizationModule.q3_visualization()
 
 # basic statistics and visualizations:
 

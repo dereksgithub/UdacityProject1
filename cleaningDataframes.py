@@ -27,6 +27,8 @@ def clean2011data(df11, questionoption2011):
         dfout11 = pd.DataFrame(df11['Prog_languages'])
         # add the 2011 year column
         dfout11['Year'] = '2011'
+        # drop NaN rows
+        dfout11 = dfout11.dropna()
         # testing
         # print(dfout11)
         return dfout11
@@ -53,6 +55,8 @@ def clean2012data(df12, questionoption2012):
         dfout12 = pd.DataFrame(df12['Prog_languages'])
         # add the 2012 year column
         dfout12['Year'] = '2012'
+        # drop NaN rows
+        dfout12 = dfout12.dropna()
         # testing
         # print(dfout12)
         return dfout12
@@ -79,6 +83,8 @@ def clean2013data(df13, questionoption2013):
         dfout13 = pd.DataFrame(df13['Prog_languages'])
         # add the 2013 year column
         dfout13['Year'] = '2013'
+        # drop NaN rows
+        dfout13 = dfout13.dropna()
         # testing
         # print(dfout13)
         return dfout13
@@ -105,6 +111,8 @@ def clean2014data(df14, questionoption2014):
         dfout14 = pd.DataFrame(df14['Prog_languages'])
         # add the 2014 year column
         dfout14['Year'] = '2014'
+        # drop NaN rows
+        dfout14 = dfout14.dropna()
         # testing
         # print(dfout14)
         return dfout14
@@ -114,7 +122,7 @@ def clean2015data(df15, questionoption2015):
     # display the reminder that the program has started
     print("extracting data from the 2015 survey data")
     # place holder
-    print(df15)
+    # print(df15)
 
     # option = 1 means we use the cleaning function to clean the dataframe and get information needed to answer business
     # question 1
@@ -135,8 +143,10 @@ def clean2015data(df15, questionoption2015):
         # print(dfout15)
         # 2015 data row 0 is not meaningful, remove row 0
         dfout15 = dfout15.drop([0])
+        # drop NaN rows
+        dfout15 = dfout15.dropna()
         # testing code
-        print(dfout15)
+        # print(dfout15)
         # return the cleaned dataset
         return dfout15
 
@@ -145,7 +155,7 @@ def clean2016data(df16, questionoption2016):
     # display the reminder that the program has started
     print("extracting data from the 2016 survey data")
     # place holder
-    print(df16)
+    #print(df16)
 
     # option = 1 means we use the cleaning function to clean the dataframe and get information needed to answer business
     # question 1
@@ -154,7 +164,21 @@ def clean2016data(df16, questionoption2016):
     elif questionoption2016 == 2:
         print("question2")
     else:
-        print("question3")
+        # get the column where all languages are stored
+        dfout16 = pd.DataFrame(df16['tech_do'])
+        # rename the column name to 'Prog_languages'
+        dfout16 = dfout16.rename(columns={'tech_do': 'Prog_languages'})
+        # add the year column
+        dfout16['Year'] = 2016
+        # drop the NaNs
+        dfout16 = dfout16.dropna()
+        # testing
+        print(dfout16)
+        # return the cleaned dataset
+        return dfout16
+
+
+
 
 
 def clean2017data(df17, questionoption2017):
