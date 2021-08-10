@@ -140,6 +140,7 @@ def clean2015data(df15, questionoption2015):
         # return the cleaned dataset
         return dfout15
 
+
 def clean2016data(df16, questionoption2016):
     # display the reminder that the program has started
     print("extracting data from the 2016 survey data")
