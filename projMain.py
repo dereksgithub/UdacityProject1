@@ -71,7 +71,20 @@ statFunction.listAvg()
 
 visualizationModule.list_basic_viz()
 
-# visualizationModule.q3_visualization(df11q3, df12q3, df13q3, df14q3, df15q3, df16q3, df17q3, df18q3, df19q3, df20q3)
+# format the dataframes for Q3:
+df_q3_2011 = visualizationModule.q3_data_format(df11q3)
+df_q3_2012 = visualizationModule.q3_data_format(df12q3)
+df_q3_2013 = visualizationModule.q3_data_format(df13q3)
+df_q3_2014 = visualizationModule.q3_data_format(df14q3)
+df_q3_2015 = visualizationModule.q3_data_format(df15q3)
+df_q3_2016 = visualizationModule.q3_data_format(df16q3)
+df_q3_2017 = visualizationModule.q3_data_format(df17q3)
+df_q3_2018 = visualizationModule.q3_data_format(df18q3)
+df_q3_2019 = visualizationModule.q3_data_format(df19q3)
+df_q3_2020 = visualizationModule.q3_data_format(df20q3)
+
+# take the input x,y axis data, label data etc. for the visualization for q3:
+# visualizationModule.q3_visualization()
 
 # basic statistics and visualizations:
 

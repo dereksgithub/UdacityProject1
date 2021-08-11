@@ -5,8 +5,15 @@ def list_basic_viz():
     print("visualization")
 
 
-def q3_visualization():
+# format the data for question and visualization
+def q3_data_format():
+    # print the reminder message
+    print("Formatting the cleaned dataframes for visualization")
+    # take all the dataframes
 
+
+def q3_visualization():
+    # take the
     #
     print("remember to remove spaces")
 
