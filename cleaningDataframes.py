@@ -193,7 +193,17 @@ def clean2018data(df18, questionoption2018):
     elif questionoption2018 == 2:
         print("question2")
     else:
-        print("question3")
+        dfout18 = pd.DataFrame(df18['LanguageWorkedWith'])
+        #rename the column name to 'Prog_languages'
+        dfout18 = dfout18.rename(columns={'LanguageWorkedWith': 'Prog_languages'})
+        # add the year column
+        dfout18['Year'] = 2018
+        # drop the NaNs
+        dfout18 = dfout18.dropna()
+        #testing
+        print(dfout18)
+        # return the cleaned dataset
+        return dfout18
 
 
 def clean2019data(df19, questionoption2019):
