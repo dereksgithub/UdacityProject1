@@ -5,17 +5,18 @@ import visualizationModule
 import pandas as pd
 
 # read the data frames
-# df11 = pd.read_csv("2011 Stack Overflow Survey Responses.csv", encoding='latin-1')
-# df12 = pd.read_csv("2012 Stack Overflow Survey Responses.csv", encoding='latin-1')
-# # for the Year 2013, we need to specify dtype to avoid low mem warning
-# df13 = pd.read_csv("2013 Stack Overflow Survey Responses.csv", encoding='latin-1', dtype='unicode')
-# df14 = pd.read_csv("2014 Stack Overflow Survey Responses.csv", encoding='latin-1', dtype='unicode')
-# df15 = pd.read_csv("2015 Stack Overflow Survey Responses.csv", encoding='latin-1', dtype='unicode')
-# df16 = pd.read_csv("2016 Stack Overflow Survey Responses.csv", encoding='latin-1', dtype='unicode')
-# df17 = pd.read_csv("2017 Stack Overflow Survey Responses.csv", encoding='latin-1', dtype='unicode')
-# df18 = pd.read_csv("2018 Stack Overflow Survey Responses.csv", encoding='latin-1', dtype='unicode')
+df11 = pd.read_csv("2011 Stack Overflow Survey Responses.csv", encoding='latin-1')
+df12 = pd.read_csv("2012 Stack Overflow Survey Responses.csv", encoding='latin-1')
+# for the Year 2013, we need to specify dtype to avoid low mem warning
+df13 = pd.read_csv("2013 Stack Overflow Survey Responses.csv", encoding='latin-1', dtype='unicode')
+df14 = pd.read_csv("2014 Stack Overflow Survey Responses.csv", encoding='latin-1', dtype='unicode')
+df15 = pd.read_csv("2015 Stack Overflow Survey Responses.csv", encoding='latin-1', dtype='unicode')
+df16 = pd.read_csv("2016 Stack Overflow Survey Responses.csv", encoding='latin-1', dtype='unicode')
+df17 = pd.read_csv("2017 Stack Overflow Survey Responses.csv", encoding='latin-1', dtype='unicode')
+df18 = pd.read_csv("2018 Stack Overflow Survey Responses.csv", encoding='latin-1', dtype='unicode')
 df19 = pd.read_csv("2019 Stack Overflow Survey Responses.csv", encoding='latin-1', dtype='unicode')
 df20 = pd.read_csv("2020 Stack Overflow Survey Responses.csv", encoding='latin-1', dtype='unicode')
+
 # calling all the cleaning functions and clean the datasets into 10 dataframes that we can perform
 # meaningful analysis
 # options 1 get the data from each year for business question 1
@@ -44,16 +45,16 @@ df20 = pd.read_csv("2020 Stack Overflow Survey Responses.csv", encoding='latin-1
 
 # options 3 get the data from each year for business question 3
 # 2011 Cleaning function ready
-# df11q3 = cleaningDataframes.clean2011data(df11, 3)
+df11q3 = cleaningDataframes.clean2011data(df11, 3)
 # 2012 Cleaning function ready
-# df12q3 = cleaningDataframes.clean2012data(df12, 3)
-# df13q3 = cleaningDataframes.clean2013data(df13, 3)
-# df14q3 = cleaningDataframes.clean2014data(df14, 3)
-# df15q3 = cleaningDataframes.clean2015data(df15, 3)
-# df16q3 = cleaningDataframes.clean2016data(df16, 3)
-# df17q3 = cleaningDataframes.clean2017data(df17, 3)
-# df18q3 = cleaningDataframes.clean2018data(df18, 3)
-# df19q3 = cleaningDataframes.clean2019data(df19, 3)
+df12q3 = cleaningDataframes.clean2012data(df12, 3)
+df13q3 = cleaningDataframes.clean2013data(df13, 3)
+df14q3 = cleaningDataframes.clean2014data(df14, 3)
+df15q3 = cleaningDataframes.clean2015data(df15, 3)
+df16q3 = cleaningDataframes.clean2016data(df16, 3)
+df17q3 = cleaningDataframes.clean2017data(df17, 3)
+df18q3 = cleaningDataframes.clean2018data(df18, 3)
+df19q3 = cleaningDataframes.clean2019data(df19, 3)
 df20q3 = cleaningDataframes.clean2020data(df20, 3)
 
 # merge 11 to 20 dataframes for analysis over 10 years
