@@ -209,9 +209,6 @@ def clean2018data(df18, questionoption2018):
 def clean2019data(df19, questionoption2019):
     # display the reminder that the program has started
     print("extracting data from the 2019 survey data")
-    # place holder
-    print(df19)
-
     # option = 1 means we use the cleaning function to clean the dataframe and get information needed to answer business
     # question 1
     if questionoption2019 == 1:
@@ -219,15 +216,22 @@ def clean2019data(df19, questionoption2019):
     elif questionoption2019 == 2:
         print("question2")
     else:
-        print("question3")
+        dfout19 = pd.DataFrame(df19['LanguageWorkedWith'])
+        # rename the column name to 'Prog_languages'
+        dfout19 = dfout19.rename(columns={'LanguageWorkedWith': 'Prog_languages'})
+        # add the year column
+        dfout19['Year'] = 2019
+        # drop the NaNs
+        dfout19 = dfout19.dropna()
+        # testing
+        print(dfout19)
+        # return the cleaned dataset
+        return dfout19
 
 
 def clean2020data(df20, questionoption2020):
     # display the reminder that the program has started
     print("extracting data from the 2020 survey data")
-    # place holder
-    print(df20)
-
     # option = 1 means we use the cleaning function to clean the dataframe and get information needed to answer business
     # question 1
     if questionoption2020 == 1:
@@ -235,4 +239,14 @@ def clean2020data(df20, questionoption2020):
     elif questionoption2020 == 2:
         print("question2")
     else:
-        print("question3")
+        dfout20 = pd.DataFrame(df20['LanguageWorkedWith'])
+        # rename the column name to 'Prog_languages'
+        dfout20 = dfout20.rename(columns={'LanguageWorkedWith': 'Prog_languages'})
+        # add the year column
+        dfout20['Year'] = 2020
+        # drop the NaNs
+        dfout20 = dfout20.dropna()
+        # testing
+        print(dfout20)
+        # return the cleaned dataset
+        return dfout20

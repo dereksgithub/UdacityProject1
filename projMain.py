@@ -15,7 +15,7 @@ import pandas as pd
 # df17 = pd.read_csv("2017 Stack Overflow Survey Responses.csv", encoding='latin-1', dtype='unicode')
 # df18 = pd.read_csv("2018 Stack Overflow Survey Responses.csv", encoding='latin-1', dtype='unicode')
 df19 = pd.read_csv("2019 Stack Overflow Survey Responses.csv", encoding='latin-1', dtype='unicode')
-df20 = 2020
+df20 = pd.read_csv("2020 Stack Overflow Survey Responses.csv", encoding='latin-1', dtype='unicode')
 # calling all the cleaning functions and clean the datasets into 10 dataframes that we can perform
 # meaningful analysis
 # options 1 get the data from each year for business question 1
@@ -27,8 +27,8 @@ df20 = 2020
 # df16q1 = cleaningDataframes.clean2016data(df16, 1)
 # df17q1 = cleaningDataframes.clean2017data(df17, 1)
 # df18q1 = cleaningDataframes.clean2018data(df18, 1)
-df19q1 = cleaningDataframes.clean2019data(df19, 1)
-df20q1 = cleaningDataframes.clean2020data(df20, 1)
+# df19q1 = cleaningDataframes.clean2019data(df19, 1)
+# df20q1 = cleaningDataframes.clean2020data(df20, 1)
 
 # options 2 get the data from each year for business question 2
 # df11q2 = cleaningDataframes.clean2011data(df11, 2)
@@ -53,7 +53,7 @@ df20q1 = cleaningDataframes.clean2020data(df20, 1)
 # df16q3 = cleaningDataframes.clean2016data(df16, 3)
 # df17q3 = cleaningDataframes.clean2017data(df17, 3)
 # df18q3 = cleaningDataframes.clean2018data(df18, 3)
-df19q3 = cleaningDataframes.clean2019data(df19, 3)
+# df19q3 = cleaningDataframes.clean2019data(df19, 3)
 df20q3 = cleaningDataframes.clean2020data(df20, 3)
 
 # merge 11 to 20 dataframes for analysis over 10 years
