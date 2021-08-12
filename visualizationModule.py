@@ -6,10 +6,19 @@ def list_basic_viz():
 
 
 # format the data for question and visualization
-def q3_data_format():
+def q3_data_format(dfin):
     # print the reminder message
     print("Formatting the cleaned dataframes for visualization")
-    # take all the dataframes
+    # get the column section and use as a list
+    all_list = dfin["Prog_languages"].tolist()
+    # create a list to store all the languages mentioned in the survey response
+    cleaned_list = []
+    for i in all_list:
+        m_list = i.split(";").strip()
+        for m in m_list:
+            cleaned_list.append(m)
+    # use the Counter() function from collections
+    # to count the number of appearances for each language
 
 
 def q3_visualization():
