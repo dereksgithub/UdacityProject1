@@ -35,14 +35,14 @@ def q3_data_format(df_in, year_df):
     for key in lang_year:
         lang_year[key] = (lang_year[key] / total_num_rows) * 100
     # keep only the top n results
-    res_year = dict(sorted(lang_year.items(), key=itemgetter(1), reverse=True)[:25])
+    if year_df < 2016:
+        res_year = dict(sorted(lang_year.items(), key=itemgetter(1), reverse=True)[:26])
+        del res_year['']
+    else:
+        res_year = dict(sorted(lang_year.items(), key=itemgetter(1), reverse=True)[:25])
+
     # add the year information
     res_year['Year'] = year_df
-    # format the dictionary key names with the following rules:
-    # VB == Visual Basic
-    # bash == Bash Shell ( any key that contains bash (any case lower or upper))
-
-
     # return the dict for plotting
     return res_year
 
@@ -71,6 +71,9 @@ def q3_visualization_bar_single_year(dict_year, viz_html_name):
 
 
 def q3_visualization_for_all_years():
+    # format the dictionary key names with the following rules:
+    # VB == Visual Basic
+    # bash == Bash Shell ( any key that contains bash (any case lower or upper))
     print("testing")
 
 # Pyecharts HTML render example:
