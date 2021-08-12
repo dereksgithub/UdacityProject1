@@ -83,8 +83,17 @@ dict_q3_2018 = visualizationModule.q3_data_format(df18q3, 2018)
 dict_q3_2019 = visualizationModule.q3_data_format(df19q3, 2019)
 dict_q3_2020 = visualizationModule.q3_data_format(df20q3, 2020)
 
-# testing code:
-print(dict_q3_2020)
+# first let's get all the barcharts from 2011 to 2020:
+visualizationModule.q3_visualization_bar_single_year(dict_q3_2011, "2011proglangbar.html")
+visualizationModule.q3_visualization_bar_single_year(dict_q3_2012, "2012proglangbar.html")
+visualizationModule.q3_visualization_bar_single_year(dict_q3_2013, "2013proglangbar.html")
+visualizationModule.q3_visualization_bar_single_year(dict_q3_2014, "2014proglangbar.html")
+visualizationModule.q3_visualization_bar_single_year(dict_q3_2015, "2015proglangbar.html")
+visualizationModule.q3_visualization_bar_single_year(dict_q3_2016, "2016proglangbar.html")
+visualizationModule.q3_visualization_bar_single_year(dict_q3_2017, "2017proglangbar.html")
+visualizationModule.q3_visualization_bar_single_year(dict_q3_2018, "2018proglangbar.html")
+visualizationModule.q3_visualization_bar_single_year(dict_q3_2019, "2019proglangbar.html")
+visualizationModule.q3_visualization_bar_single_year(dict_q3_2020, "2020proglangbar.html")
 # take the input x,y axis data, label data etc. for the visualization for q3:
 # visualizationModule.q3_visualization()
 

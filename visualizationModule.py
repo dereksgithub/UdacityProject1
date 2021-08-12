@@ -2,7 +2,12 @@
 # from pyecharts import options as opts
 from operator import itemgetter
 from collections import Counter
+from pyecharts.charts import Bar
+from pyecharts import options as opts
+import numpy as np
 
+
+# basic visualization for any cleaned dataframe:
 def list_basic_viz():
     print("visualization")
 
@@ -28,21 +33,40 @@ def q3_data_format(df_in, year_df):
     lang_year = dict(lang_year)
     # transform each language's appearance in "%"
     for key in lang_year:
-        lang_year[key] = (lang_year[key] / total_num_rows)*100
-    # keep only the top 20 results
-    res_year = dict(sorted(lang_year.items(), key=itemgetter(1), reverse=True)[:20])
+        lang_year[key] = (lang_year[key] / total_num_rows) * 100
+    # keep only the top n results
+    res_year = dict(sorted(lang_year.items(), key=itemgetter(1), reverse=True)[:25])
     # add the year information
     res_year['Year'] = year_df
     # return the dict for plotting
     return res_year
 
-def q3_visualization():
-    # take the
-    #
-    print("remember to remove spaces")
+
+def q3_visualization_bar_single_year(dict_year, viz_html_name):
+    """
+    :param dict_year:
+    result of this function is a rendered html visualization barchart
+    """
+    # keep the year data for title and x axis
+    year_num = dict_year['Year']
+    # then delete the year entry
+    del dict_year['Year']
+    # get the lists ready for plotting
+    res_keys = list(dict_year.keys())
+    lang_values = list(dict_year.values())
+    # round up the percentage values
+    lang_values = list(np.around(np.array(lang_values), 2))
+    bar = Bar()
+    bar.add_xaxis(res_keys)
+    bar.add_yaxis("Percentage", lang_values)
+    # set the title ready
+    bar.set_global_opts(title_opts=opts.TitleOpts(title="25 Most Popular Languages from \n StackOverflow"
+                                                        "Survey Result for year " + str(year_num)))
+    bar.render(viz_html_name)
 
 
-
+def q3_visualization_for_all_years():
+    print("testing")
 
 # Pyecharts HTML render example:
 # from pyecharts.charts import Bar
