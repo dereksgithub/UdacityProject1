@@ -38,6 +38,11 @@ def q3_data_format(df_in, year_df):
     res_year = dict(sorted(lang_year.items(), key=itemgetter(1), reverse=True)[:25])
     # add the year information
     res_year['Year'] = year_df
+    # format the dictionary key names with the following rules:
+    # VB == Visual Basic
+    # bash == Bash Shell ( any key that contains bash (any case lower or upper))
+
+
     # return the dict for plotting
     return res_year
 
