@@ -99,7 +99,12 @@ def q3_visualization_bar_single_year(dict_year, viz_html_name):
 def q3_visualization_for_all_years(*argv):
     """
     This function can take multiple dictionaries as input and transform them into a dataframe that is ready for
-    visualization using pyecharts library
+    visualization using pyecharts library.
     :return: this function renders the visualization into a HTML page, with no specific output
     """
-    print("testing")
+    # using a for loop to iterate through the dicts
+    for arg_dict in argv:
+        which_year = arg_dict['Year']
+        del arg_dict['Year']
+        print(which_year)
+        print(arg_dict)
