@@ -88,6 +88,10 @@ print(dict_q3_2013)
 print(dict_q3_2014)
 print(dict_q3_2015)
 print(dict_q3_2016)
+print(dict_q3_2017)
+print(dict_q3_2018)
+print(dict_q3_2019)
+print(dict_q3_2020)
 
 # first let's get all the barcharts from 2011 to 2020:
 # visualizationModule.q3_visualization_bar_single_year(dict_q3_2011, "2011proglangbar.html")

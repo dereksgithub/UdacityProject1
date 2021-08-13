@@ -26,6 +26,28 @@ def q3_data_format(df_in, year_df):
         m_list = i.split(";")
         for m in m_list:
             cleaned_list.append(m.strip())
+    # remove "Other(s):", "None", "Cloud (AWS, GAE, Azure, etc.)", "iOS", "Android"
+    cleaned_list = [x for x in cleaned_list if
+                    x not in ("Other(s):", "None", "Cloud (AWS, GAE, Azure, etc.)", "iOS", "Android")]
+    # format the language names with the following rules:
+    replacements = {"VB": "Visual Basic",
+                    "vb.net": "VB.NET",
+                    "VB.Net": "VB.NET",
+                    "Arduino / Raspberry Pi": "Assembly",
+                    "Bash/Shell": "Bash/Shell/PowerShell",
+                    "Bash": "Bash/Shell/PowerShell",
+                    "Visual Basic 6": "Visual Basic",
+                    "C++11": "C++",
+                    "HTML": "HTML/CSS",
+                    "HTML5": "HTML/CSS"}
+    cleaned_list = [replacements.get(x, x) for x in cleaned_list]
+    # clean the CSS/HTML name confusion
+    if year_df < 2013:
+        cleaned_list = [x for x in cleaned_list if x not in ("HTML/CSS", "")]
+        replacements2 = {"CSS": "HTML/CSS"}
+        cleaned_list = [replacements2.get(x, x) for x in cleaned_list]
+    else:
+        cleaned_list = [x for x in cleaned_list if x not in ("CSS", "")]
     # use the Counter() function from collections
     # to count the number of appearances for each language
     lang_year = Counter(cleaned_list)
@@ -34,13 +56,8 @@ def q3_data_format(df_in, year_df):
     # transform each language's appearance in "%"
     for key in lang_year:
         lang_year[key] = (lang_year[key] / total_num_rows) * 100
-    # keep only the top n results
-    if year_df < 2016:
-        res_year = dict(sorted(lang_year.items(), key=itemgetter(1), reverse=True)[:26])
-        del res_year['']
-    else:
-        res_year = dict(sorted(lang_year.items(), key=itemgetter(1), reverse=True)[:25])
-
+    # keep only the top 25 results
+    res_year = dict(sorted(lang_year.items(), key=itemgetter(1), reverse=True)[:25])
     # add the year information
     res_year['Year'] = year_df
     # return the dict for plotting
@@ -75,5 +92,3 @@ def q3_visualization_for_all_years():
     # VB == Visual Basic
     # bash == Bash Shell ( any key that contains bash (any case lower or upper))
     print("testing")
-
-
