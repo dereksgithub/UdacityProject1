@@ -39,7 +39,8 @@ def q3_data_format(df_in, year_df):
                     "Visual Basic 6": "Visual Basic",
                     "C++11": "C++",
                     "HTML": "HTML/CSS",
-                    "HTML5": "HTML/CSS"}
+                    "HTML5": "HTML/CSS",
+                    "groovy": "Groovy"}
     cleaned_list = [replacements.get(x, x) for x in cleaned_list]
     # clean the CSS/HTML name confusion
     if year_df < 2013:
