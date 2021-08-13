@@ -35,7 +35,8 @@ def q3_data_format(df_in, year_df):
             cleaned_list.append(m.strip())
     # remove "Other(s):", "None", "Cloud (AWS, GAE, Azure, etc.)", "iOS", "Android"
     cleaned_list = [x for x in cleaned_list if
-                    x not in ("Other(s):", "None", "Cloud (AWS, GAE, Azure, etc.)", "iOS", "Android")]
+                    x not in ("Other(s):", "None", "Windows Phone",
+                              "Cloud (AWS, GAE, Azure, etc.)", "iOS", "Android")]
     # format the language names with the following rules:
     replacements = {"VB": "Visual Basic",
                     "vb.net": "VB.NET",
