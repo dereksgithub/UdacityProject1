@@ -4,6 +4,12 @@ import pandas as pd
 
 # cleaning function for 2011 data
 def clean2011data(df11, questionoption2011):
+    """
+    This is the cleaning function dedicated for the 2011 data
+    :param df11: data frame for 2011 survey result
+    :param questionoption2011: 1,2, or 3 ( any input other than 1 or 2 will be recognized as 3)
+    :return: the cleaned dataframe for question 1, 2 or 3
+    """
     # display the reminder that the program has started
     print("extracting data from the 2011 survey data")
     # option = 1 means we use the cleaning function to clean the dataframe and get information needed to answer business
@@ -31,6 +37,12 @@ def clean2011data(df11, questionoption2011):
 
 
 def clean2012data(df12, questionoption2012):
+    """
+    This is the cleaning function dedicated for the 2012 data
+    :param df12: data frame for 2012 survey result
+    :param questionoption2012: 1,2, or 3 ( any input other than 1 or 2 will be recognized as 3)
+    :return: the cleaned dataframe for question 1, 2 or 3
+    """
     # display the reminder that the program has started
     print("extracting data from the 2012 survey data")
     # option = 1 means we use the cleaning function to clean the dataframe and get information needed to answer business
@@ -56,6 +68,12 @@ def clean2012data(df12, questionoption2012):
 
 
 def clean2013data(df13, questionoption2013):
+    """
+    This is the cleaning function dedicated for the 2013 data
+    :param df13: data frame for 2013 survey result
+    :param questionoption2013: 1,2, or 3 ( any input other than 1 or 2 will be recognized as 3)
+    :return: the cleaned dataframe for question 1, 2 or 3
+    """
     # display the reminder that the program has started
     print("extracting data from the 2013 survey data")
     # option = 1 means we use the cleaning function to clean the dataframe and get information needed to answer business
@@ -81,6 +99,12 @@ def clean2013data(df13, questionoption2013):
 
 
 def clean2014data(df14, questionoption2014):
+    """
+    This is the cleaning function dedicated for the 2014 data
+    :param df14: data frame for 2014 survey result
+    :param questionoption2014: 1,2, or 3 ( any input other than 1 or 2 will be recognized as 3)
+    :return: the cleaned dataframe for question 1, 2 or 3
+    """
     # display the reminder that the program has started
     print("extracting data from the 2014 survey data")
     # option = 1 means we use the cleaning function to clean the dataframe and get information needed to answer business
@@ -106,6 +130,12 @@ def clean2014data(df14, questionoption2014):
 
 
 def clean2015data(df15, questionoption2015):
+    """
+    This is the cleaning function dedicated for the 2015 data
+    :param df15: data frame for 2015 survey result
+    :param questionoption2015: 1,2, or 3 ( any input other than 1 or 2 will be recognized as 3)
+    :return: the cleaned dataframe for question 1, 2 or 3
+    """
     # display the reminder that the program has started
     print("extracting data from the 2015 survey data")
     # option = 1 means we use the cleaning function to clean the dataframe and get information needed to answer business
@@ -136,6 +166,12 @@ def clean2015data(df15, questionoption2015):
 
 
 def clean2016data(df16, questionoption2016):
+    """
+    This is the cleaning function dedicated for the 2016 data
+    :param df16: data frame for 2016 survey result
+    :param questionoption2016: 1,2, or 3 ( any input other than 1 or 2 will be recognized as 3)
+    :return: the cleaned dataframe for question 1, 2 or 3
+    """
     # display the reminder that the program has started
     print("extracting data from the 2016 survey data")
     # option = 1 means we use the cleaning function to clean the dataframe and get information needed to answer business
@@ -160,6 +196,12 @@ def clean2016data(df16, questionoption2016):
 
 
 def clean2017data(df17, questionoption2017):
+    """
+    This is the cleaning function dedicated for the 2017 data
+    :param df17: data frame for 2017 survey result
+    :param questionoption2017: 1,2, or 3 ( any input other than 1 or 2 will be recognized as 3)
+    :return: the cleaned dataframe for question 1, 2 or 3
+    """
     # display the reminder that the program has started
     print("extracting data from the 2017 survey data")
     # option = 1 means we use the cleaning function to clean the dataframe and get information needed to answer business
@@ -184,6 +226,12 @@ def clean2017data(df17, questionoption2017):
 
 
 def clean2018data(df18, questionoption2018):
+    """
+    This is the cleaning function dedicated for the 2018 data
+    :param df18: data frame for 2018 survey result
+    :param questionoption2018: 1,2, or 3 ( any input other than 1 or 2 will be recognized as 3)
+    :return: the cleaned dataframe for question 1, 2 or 3
+    """
     # display the reminder that the program has started
     print("extracting data from the 2018 survey data")
     # option = 1 means we use the cleaning function to clean the dataframe and get information needed to answer business
@@ -194,19 +242,25 @@ def clean2018data(df18, questionoption2018):
         print("question2")
     else:
         dfout18 = pd.DataFrame(df18['LanguageWorkedWith'])
-        #rename the column name to 'Prog_languages'
+        # rename the column name to 'Prog_languages'
         dfout18 = dfout18.rename(columns={'LanguageWorkedWith': 'Prog_languages'})
         # add the year column
         dfout18['Year'] = 2018
         # drop the NaNs
         dfout18 = dfout18.dropna()
-        #testing
+        # testing
         print(dfout18)
         # return the cleaned dataset
         return dfout18
 
 
 def clean2019data(df19, questionoption2019):
+    """
+    This is the cleaning function dedicated for the 2019 data
+    :param df19: data frame for 2019 survey result
+    :param questionoption2019: 1,2, or 3 ( any input other than 1 or 2 will be recognized as 3)
+    :return: the cleaned dataframe for question 1, 2 or 3
+    """
     # display the reminder that the program has started
     print("extracting data from the 2019 survey data")
     # option = 1 means we use the cleaning function to clean the dataframe and get information needed to answer business
@@ -230,6 +284,12 @@ def clean2019data(df19, questionoption2019):
 
 
 def clean2020data(df20, questionoption2020):
+    """
+    This is the cleaning function dedicated for the 2020 data
+    :param df20: data frame for 2020 survey result
+    :param questionoption2020: 1,2, or 3 ( any input other than 1 or 2 will be recognized as 3)
+    :return: the cleaned dataframe for question 1, 2 or 3
+    """
     # display the reminder that the program has started
     print("extracting data from the 2020 survey data")
     # option = 1 means we use the cleaning function to clean the dataframe and get information needed to answer business

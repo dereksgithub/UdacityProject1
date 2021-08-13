@@ -14,6 +14,13 @@ def list_basic_viz():
 
 # format the data for question and visualization
 def q3_data_format(df_in, year_df):
+    """
+    This function formats the cleaned question 3 dataframe and transform it into a dictionary.
+    e.g. {'SQL': 57.356076759061835, 'JavaScript': 50.49751243781094}
+    :param df_in: the survey result dataframe that is cleaned for question 3
+    :param year_df: this sets the year of the data e.g. 2011, 2012
+    :return: res_year: the result dict for this year
+    """
     # print the reminder message
     print("Formatting the cleaned dataframes for visualization")
     # get the total number of rows of cleaned data
@@ -67,6 +74,7 @@ def q3_data_format(df_in, year_df):
 
 def q3_visualization_bar_single_year(dict_year, viz_html_name):
     """
+    This method visualize the dict data from the method q3_data_format(df_in, year_df), into bar charts
     :param dict_year:
     result of this function is a rendered html visualization barchart
     """
@@ -88,8 +96,10 @@ def q3_visualization_bar_single_year(dict_year, viz_html_name):
     bar.render(viz_html_name)
 
 
-def q3_visualization_for_all_years():
-    # format the dictionary key names with the following rules:
-    # VB == Visual Basic
-    # bash == Bash Shell ( any key that contains bash (any case lower or upper))
+def q3_visualization_for_all_years(*argv):
+    """
+    This function can take multiple dictionaries as input and transform them into a dataframe that is ready for
+    visualization using pyecharts library
+    :return: this function renders the visualization into a HTML page, with no specific output
+    """
     print("testing")
