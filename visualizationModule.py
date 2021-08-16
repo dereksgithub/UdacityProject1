@@ -7,6 +7,7 @@ from pyecharts.charts import Bar
 import numpy as np
 import pyecharts.options as opts
 from pyecharts.charts import Line
+import pandas as pd
 
 # basic visualization for any cleaned dataframe:
 def list_basic_viz():
@@ -14,12 +15,13 @@ def list_basic_viz():
 
 
 # format the data for question and visualization
-def q3_data_format(df_in, year_df):
+def q3_data_format(df_in, year_df, n_lang):
     """
     This function formats the cleaned question 3 dataframe and transform it into a dictionary.
     e.g. {'SQL': 57.356076759061835, 'JavaScript': 50.49751243781094}
     :param df_in: the survey result dataframe that is cleaned for question 3
     :param year_df: this sets the year of the data e.g. 2011, 2012
+    :param n_lang: how many languages would like to explore
     :return: res_year: the result dict for this year
     """
     # print the reminder message
@@ -69,7 +71,7 @@ def q3_data_format(df_in, year_df):
     for key in lang_year:
         lang_year[key] = (lang_year[key] / total_num_rows) * 100
     # keep only the top 25 results
-    res_year = dict(sorted(lang_year.items(), key=itemgetter(1), reverse=True)[:25])
+    res_year = dict(sorted(lang_year.items(), key=itemgetter(1), reverse=True)[:n_lang])
     # add the year information
     res_year['Year'] = year_df
     # return the dict for plotting
@@ -107,15 +109,25 @@ def q3_visualization_for_all_years(*argv):
     :return: this function renders the visualization into a HTML page, with no specific output
     """
     # using a for loop to iterate through the dicts
-    for arg_dict in argv:
-        which_year = arg_dict['Year']
-        del arg_dict['Year']
-        print(which_year)
-        print(arg_dict)
+    # for arg_dict in argv:
+    #     which_year = arg_dict['Year']
+    #     del arg_dict['Year']
+    #     print(which_year)
+    #     print(arg_dict)
+    df_raw = pd.DataFrame(argv)
+    # there will be many NaNs, replace them with 0 for plotting
+    df_cleaned = df_raw.fillna(0)
+    # keep only 2 decimals
+    df_plotting = df_cleaned.round(2)
 
-    week_name_list = ["周一", "周二", "周三", "周四", "周五", "周六", "周日"]
-    high_temperature = [11, 11, 15, 13, 12, 13, 10]
-    low_temperature = [1, -2, 2, 5, 3, 2, 0]
+    # print(df_plotting["Year"])
+    for col in df_cleaned.columns:
+        print(col)
+
+    # start the plotting section:
+    week_name_list = df_plotting["Year"]
+    high_temperature = [11, 11, 15, 13, 12, 13, 10, 5, 5, 10]
+    low_temperature = [1, -2, 2, 5, 3, 2, 0, 0, 1, 2]
 
     (
         Line(init_opts=opts.InitOpts(width="1600px", height="800px"))
@@ -141,14 +153,15 @@ def q3_visualization_for_all_years(*argv):
             ),
             markline_opts=opts.MarkLineOpts(
                 data=[
-                    opts.MarkLineItem(type_="average", name="平均值"),
-                    opts.MarkLineItem(symbol="none", x="90%", y="max"),
+                    # opts.MarkLineItem(type_="average", name="Average"),
+                    # opts.MarkLineItem(symbol="none", x="90%", y="max"),
                     opts.MarkLineItem(symbol="circle", type_="max", name="最高点"),
                 ]
             ),
         )
             .set_global_opts(
-            title_opts=opts.TitleOpts(title="未来一周气温变化", subtitle="纯属虚构"),
+            title_opts=opts.TitleOpts(title="% of Programming Language from the Survey ",
+                                      subtitle="% of people from the survey who uses this Language"),
             tooltip_opts=opts.TooltipOpts(trigger="axis"),
             toolbox_opts=opts.ToolboxOpts(is_show=False),
             xaxis_opts=opts.AxisOpts(type_="category", boundary_gap=False),

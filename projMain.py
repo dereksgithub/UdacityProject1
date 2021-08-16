@@ -72,16 +72,16 @@ statFunction.listAvg()
 visualizationModule.list_basic_viz()
 
 # format the dataframes for Q3:
-dict_q3_2011 = visualizationModule.q3_data_format(df11q3, 2011)
-dict_q3_2012 = visualizationModule.q3_data_format(df12q3, 2012)
-dict_q3_2013 = visualizationModule.q3_data_format(df13q3, 2013)
-dict_q3_2014 = visualizationModule.q3_data_format(df14q3, 2014)
-dict_q3_2015 = visualizationModule.q3_data_format(df15q3, 2015)
-dict_q3_2016 = visualizationModule.q3_data_format(df16q3, 2016)
-dict_q3_2017 = visualizationModule.q3_data_format(df17q3, 2017)
-dict_q3_2018 = visualizationModule.q3_data_format(df18q3, 2018)
-dict_q3_2019 = visualizationModule.q3_data_format(df19q3, 2019)
-dict_q3_2020 = visualizationModule.q3_data_format(df20q3, 2020)
+dict_q3_2011 = visualizationModule.q3_data_format(df11q3, 2011, 25)
+dict_q3_2012 = visualizationModule.q3_data_format(df12q3, 2012, 25)
+dict_q3_2013 = visualizationModule.q3_data_format(df13q3, 2013, 25)
+dict_q3_2014 = visualizationModule.q3_data_format(df14q3, 2014, 25)
+dict_q3_2015 = visualizationModule.q3_data_format(df15q3, 2015, 25)
+dict_q3_2016 = visualizationModule.q3_data_format(df16q3, 2016, 25)
+dict_q3_2017 = visualizationModule.q3_data_format(df17q3, 2017, 25)
+dict_q3_2018 = visualizationModule.q3_data_format(df18q3, 2018, 25)
+dict_q3_2019 = visualizationModule.q3_data_format(df19q3, 2019, 25)
+dict_q3_2020 = visualizationModule.q3_data_format(df20q3, 2020, 25)
 
 # take all the dictionaries into our visualization function and plot the functions
 visualizationModule.q3_visualization_for_all_years(dict_q3_2011, dict_q3_2012, dict_q3_2013, dict_q3_2014, dict_q3_2015,
