@@ -278,7 +278,7 @@ def clean2019data(df19, questionoption2019):
         # drop the NaNs
         dfout19 = dfout19.dropna()
         # testing
-        print(dfout19)
+        # print(dfout19)
         # return the cleaned dataset
         return dfout19
 

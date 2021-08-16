@@ -84,7 +84,7 @@ dict_q3_2019 = visualizationModule.q3_data_format(df19q3, 2019)
 dict_q3_2020 = visualizationModule.q3_data_format(df20q3, 2020)
 
 # take all the dictionaries into our visualization function and plot the functions
-#visualizationModule.q3_visualization_for_all_years(dict_q3_2011, dict_q3_2012, dict_q3_2013, dict_q3_2014, dict_q3_2015,
+# visualizationModule.q3_visualization_for_all_years(dict_q3_2011, dict_q3_2012, dict_q3_2013, dict_q3_2014, dict_q3_2015,
                                                    # dict_q3_2016, dict_q3_2017, dict_q3_2018, dict_q3_2019, dict_q3_2020)
 # first let's get all the barcharts from 2011 to 2020:
 visualizationModule.q3_visualization_bar_single_year(dict_q3_2011, "2011proglangbar.html")

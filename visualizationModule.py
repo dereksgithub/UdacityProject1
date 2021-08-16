@@ -44,6 +44,8 @@ def q3_data_format(df_in, year_df):
                     "Arduino / Raspberry Pi": "Assembly",
                     "Bash/Shell": "Bash/Shell/PowerShell",
                     "Bash": "Bash/Shell/PowerShell",
+                    "bash": "Bash/Shell/PowerShell",
+                    "perl": "Perl",
                     "Visual Basic 6": "Visual Basic",
                     "C++11": "C++",
                     "HTML": "HTML/CSS",
