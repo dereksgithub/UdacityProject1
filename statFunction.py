@@ -1,10 +1,11 @@
 # perform basic statistical anakysis on dataframes for a first-look view of data
 
 def listAvg():
-
-    #this list average salary
+    # this list average salary
 
     print("average is:")
+
+
 import pyecharts.options as opts
 from pyecharts.charts import Line
 
@@ -12,7 +13,6 @@ from pyecharts.charts import Line
 Pyecharts line plot example, q3 final merged visualization will be similar to this
 
 """
-
 
 """
 Gallery 使用 pyecharts 1.1.0
@@ -27,11 +27,10 @@ week_name_list = ["周一", "周二", "周三", "周四", "周五", "周六", "�
 high_temperature = [11, 11, 15, 13, 12, 13, 10]
 low_temperature = [1, -2, 2, 5, 3, 2, 0]
 
-
 (
     Line(init_opts=opts.InitOpts(width="1600px", height="800px"))
-    .add_xaxis(xaxis_data=week_name_list)
-    .add_yaxis(
+        .add_xaxis(xaxis_data=week_name_list)
+        .add_yaxis(
         series_name="最高气温",
         y_axis=high_temperature,
         markpoint_opts=opts.MarkPointOpts(
@@ -44,7 +43,7 @@ low_temperature = [1, -2, 2, 5, 3, 2, 0]
             data=[opts.MarkLineItem(type_="average", name="平均值")]
         ),
     )
-    .add_yaxis(
+        .add_yaxis(
         series_name="最低气温",
         y_axis=low_temperature,
         markpoint_opts=opts.MarkPointOpts(
@@ -58,11 +57,11 @@ low_temperature = [1, -2, 2, 5, 3, 2, 0]
             ]
         ),
     )
-    .set_global_opts(
+        .set_global_opts(
         title_opts=opts.TitleOpts(title="未来一周气温变化", subtitle="纯属虚构"),
         tooltip_opts=opts.TooltipOpts(trigger="axis"),
         toolbox_opts=opts.ToolboxOpts(is_show=True),
         xaxis_opts=opts.AxisOpts(type_="category", boundary_gap=False),
     )
-    .render("example_pyechart_line_chart.html")
+        .render("example_pyechart_line_chart.html")
 )
