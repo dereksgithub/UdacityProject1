@@ -54,7 +54,8 @@ def q3_data_format(df_in, year_df, n_lang):
                     "C++11": "C++",
                     "HTML": "HTML/CSS",
                     "HTML5": "HTML/CSS",
-                    "groovy": "Groovy"}
+                    "groovy": "Groovy",
+                    "python": "Python"}
     cleaned_list = [replacements.get(x, x) for x in cleaned_list]
     # clean the CSS/HTML name confusion
     if year_df < 2013:
@@ -72,7 +73,14 @@ def q3_data_format(df_in, year_df, n_lang):
     for key in lang_year:
         lang_year[key] = (lang_year[key] / total_num_rows) * 100
     # keep only the top 25 results
+    # res_year = dict(sorted(lang_year.items(), key=itemgetter(1), reverse=True)[:n_lang])
     res_year = dict(sorted(lang_year.items(), key=itemgetter(1), reverse=True)[:n_lang])
+    # keep only the top 11 that we need this is from reading the visuals.
+    res_dict_filter = lambda x, y: dict([(i, x[i]) for i in x if i in set(y)])
+    lang_to_keep = ("SQL", "JavaScript", "HTML/CSS", "C", "C++", "PHP", "C#", "jQuery", "Python",
+                    "Bash/Shell/PowerShell", "Java")
+    # filter out only the 11 results taht we need to know
+    res_year = res_dict_filter(res_year, lang_to_keep)
     # add the year information
     res_year['Year'] = year_df
     # return the dict for plotting
