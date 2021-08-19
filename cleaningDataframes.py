@@ -53,7 +53,7 @@ def clean2012data(df12, questionoption2012):
         print("question2")
     else:
         # here we take the columns that contains languages merge columns
-        df12['Prog_languages'] = df12[df12.columns[23:37]].apply(
+        df12['Prog_languages'] = df12[df12.columns[22:37]].apply(
             lambda x: ';'.join(x.dropna().astype(str)),
             axis=1)
         # rename the merged column
@@ -84,7 +84,7 @@ def clean2013data(df13, questionoption2013):
         print("question2")
     else:
         # sort out all columns that contains languages amd merge them into one col
-        df13['Prog_languages'] = df13[df13.columns[57:70]].apply(
+        df13['Prog_languages'] = df13[df13.columns[56:70]].apply(
             lambda x: ';'.join(x.dropna().astype(str)),
             axis=1)
         # rename the merged column
@@ -115,7 +115,7 @@ def clean2014data(df14, questionoption2014):
         print("question2")
     else:
         # sort out all columns that contains languages amd merge them into one col
-        df14['Prog_languages'] = df14[df14.columns[43:54]].apply(
+        df14['Prog_languages'] = df14[df14.columns[42:54]].apply(
             lambda x: ';'.join(x.dropna().astype(str)),
             axis=1)
         # rename the merged column

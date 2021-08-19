@@ -55,6 +55,7 @@ def q3_data_format(df_in, year_df, n_lang):
                     "HTML": "HTML/CSS",
                     "HTML5": "HTML/CSS",
                     "groovy": "Groovy",
+                    "LAMP": "Bash/Shell/PowerShell",
                     "python": "Python"}
     cleaned_list = [replacements.get(x, x) for x in cleaned_list]
     # clean the CSS/HTML name confusion
@@ -77,9 +78,9 @@ def q3_data_format(df_in, year_df, n_lang):
     res_year = dict(sorted(lang_year.items(), key=itemgetter(1), reverse=True)[:n_lang])
     # keep only the top 11 that we need this is from reading the visuals.
     res_dict_filter = lambda x, y: dict([(i, x[i]) for i in x if i in set(y)])
-    lang_to_keep = ("SQL", "JavaScript", "HTML/CSS", "C", "C++", "PHP", "C#", "jQuery", "Python",
+    lang_to_keep = ("SQL", "JavaScript", "HTML/CSS", "C", "C++", "PHP", "C#", "Python",
                     "Bash/Shell/PowerShell", "Java")
-    # filter out only the 11 results taht we need to know
+    # filter out only the 10 results taht we need to know
     res_year = res_dict_filter(res_year, lang_to_keep)
     # add the year information
     res_year['Year'] = year_df
@@ -168,4 +169,4 @@ def q3_visualization_for_all_years(*argv):
         toolbox_opts=opts.ToolboxOpts(is_show=False),
         xaxis_opts=opts.AxisOpts(type_="category", boundary_gap=False),
     )
-    line.render("example_pyechart_line_chart_2.html")
+    line.render("lang_10_years.html")
