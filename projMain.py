@@ -20,42 +20,45 @@ df20 = pd.read_csv("2020 Stack Overflow Survey Responses.csv", encoding='latin-1
 # calling all the cleaning functions and clean the datasets into 10 dataframes that we can perform
 # meaningful analysis
 # options 1 get the data from each year for business question 1
-# df11q1 = cleaningDataframes.clean2011data(df11, 1)
-# df12q1 = cleaningDataframes.clean2012data(df12, 1)
-# df13q1 = cleaningDataframes.clean2013data(df13, 1)
-# df14q1 = cleaningDataframes.clean2014data(df14, 1)
-# df15q1 = cleaningDataframes.clean2015data(df15, 1)
-# df16q1 = cleaningDataframes.clean2016data(df16, 1)
-# df17q1 = cleaningDataframes.clean2017data(df17, 1)
-# df18q1 = cleaningDataframes.clean2018data(df18, 1)
-# df19q1 = cleaningDataframes.clean2019data(df19, 1)
-# df20q1 = cleaningDataframes.clean2020data(df20, 1)
+q1opt = 1
+# df11q1 = cleaningDataframes.clean2011data(df11, q1opt)
+# df12q1 = cleaningDataframes.clean2012data(df12, q1opt)
+# df13q1 = cleaningDataframes.clean2013data(df13, q1opt)
+# df14q1 = cleaningDataframes.clean2014data(df14, q1opt)
+# df15q1 = cleaningDataframes.clean2015data(df15, q1opt)
+# df16q1 = cleaningDataframes.clean2016data(df16, q1opt)
+# df17q1 = cleaningDataframes.clean2017data(df17, q1opt)
+# df18q1 = cleaningDataframes.clean2018data(df18, q1opt)
+# df19q1 = cleaningDataframes.clean2019data(df19, q1opt)
+# df20q1 = cleaningDataframes.clean2020data(df20, q1opt)
 
 # options 2 get the data from each year for business question 2
-# df11q2 = cleaningDataframes.clean2011data(df11, 2)
-# df12q2 = cleaningDataframes.clean2012data(df12, 2)
-# df13q2 = cleaningDataframes.clean2013data(df13, 2)
-# df14q2 = cleaningDataframes.clean2014data(df14, 2)
-# df15q2 = cleaningDataframes.clean2015data(df15, 2)
-# df16q2 = cleaningDataframes.clean2016data(df16, 2)
-# df17q2 = cleaningDataframes.clean2017data(df17, 2)
-# df18q2 = cleaningDataframes.clean2018data(df18, 2)
-# df19q2 = cleaningDataframes.clean2019data(df19, 2)
-# df20q2 = cleaningDataframes.clean2020data(df20, 2)
+q2opt = 2
+# df11q2 = cleaningDataframes.clean2011data(df11, q2opt)
+# df12q2 = cleaningDataframes.clean2012data(df12, q2opt)
+# df13q2 = cleaningDataframes.clean2013data(df13, q2opt)
+# df14q2 = cleaningDataframes.clean2014data(df14, q2opt)
+# df15q2 = cleaningDataframes.clean2015data(df15, q2opt)
+# df16q2 = cleaningDataframes.clean2016data(df16, q2opt)
+# df17q2 = cleaningDataframes.clean2017data(df17, q2opt)
+# df18q2 = cleaningDataframes.clean2018data(df18, q2opt)
+# df19q2 = cleaningDataframes.clean2019data(df19, q2opt)
+# df20q2 = cleaningDataframes.clean2020data(df20, q2opt)
 
 # options 3 get the data from each year for business question 3
+q3opt = 3
 # 2011 Cleaning function ready
-df11q3 = cleaningDataframes.clean2011data(df11, 3)
+df11q3 = cleaningDataframes.clean2011data(df11, q3opt)
 # 2012 Cleaning function ready
-df12q3 = cleaningDataframes.clean2012data(df12, 3)
-df13q3 = cleaningDataframes.clean2013data(df13, 3)
-df14q3 = cleaningDataframes.clean2014data(df14, 3)
-df15q3 = cleaningDataframes.clean2015data(df15, 3)
-df16q3 = cleaningDataframes.clean2016data(df16, 3)
-df17q3 = cleaningDataframes.clean2017data(df17, 3)
-df18q3 = cleaningDataframes.clean2018data(df18, 3)
-df19q3 = cleaningDataframes.clean2019data(df19, 3)
-df20q3 = cleaningDataframes.clean2020data(df20, 3)
+df12q3 = cleaningDataframes.clean2012data(df12, q3opt)
+df13q3 = cleaningDataframes.clean2013data(df13, q3opt)
+df14q3 = cleaningDataframes.clean2014data(df14, q3opt)
+df15q3 = cleaningDataframes.clean2015data(df15, q3opt)
+df16q3 = cleaningDataframes.clean2016data(df16, q3opt)
+df17q3 = cleaningDataframes.clean2017data(df17, q3opt)
+df18q3 = cleaningDataframes.clean2018data(df18, q3opt)
+df19q3 = cleaningDataframes.clean2019data(df19, q3opt)
+df20q3 = cleaningDataframes.clean2020data(df20, q3opt)
 
 # merge 11 to 20 dataframes for analysis over 10 years
 
