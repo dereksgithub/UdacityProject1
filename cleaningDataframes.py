@@ -310,3 +310,10 @@ def clean2020data(df20, questionoption2020):
         # print(dfout20)
         # return the cleaned dataset
         return dfout20
+
+
+"""
+Remarks:need to generalize different options. I developed option 3 here first. However, it is more efficient to develop
+a dedicated function that handles all option3 for different years, rather than repeating the code so many times.
+
+"""
