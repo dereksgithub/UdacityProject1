@@ -1,6 +1,6 @@
 # get pandas:
 import pandas as pd
-
+import statFunction
 
 # cleaning function for 2011 data
 def clean2011data(df11, questionoption2011):
@@ -48,6 +48,7 @@ def clean2012data(df12, questionoption2012):
     # option = 1 means we use the cleaning function to clean the dataframe and get information needed to answer business
     # question 1
     if questionoption2012 == 1:
+        statFunction.listAvg()
         print("question1")
     elif questionoption2012 == 2:
         print("question2")

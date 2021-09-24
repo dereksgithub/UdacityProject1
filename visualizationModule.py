@@ -9,11 +9,9 @@ import pyecharts.options as opts
 from pyecharts.charts.basic_charts.line import Line
 import pandas as pd
 
-
 # basic visualization for any cleaned dataframe:
 def list_basic_viz():
     print("visualization")
-
 
 # format the data for question and visualization
 def q3_data_format(df_in, year_df, n_lang):
