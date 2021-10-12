@@ -16,6 +16,7 @@ def clean2011data(df11, questionoption2011):
     # question 1
     if questionoption2011 == 1:
         # process the 2011 dataset and get the information needed only for question and return the dataframe
+        statFunction.listAvg()
         print("question1")
     elif questionoption2011 == 2:
         #
