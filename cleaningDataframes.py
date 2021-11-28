@@ -43,7 +43,7 @@ def clean2012data(df12, questionoption2012):
     This is the cleaning function dedicated for the 2012 data
     :param df12: data frame for 2012 survey result
     :param questionoption2012: 1,2, or 3 ( any input other than 1 or 2 will be recognized as 3)
-    :return: the cleaned dataframe for question 1, 2 or 3
+    :return: the cleaned dataframe for question 1, 2 or 3 5
     """
     # display the reminder that the program has started
     print("extracting data from the 2012 survey data")
