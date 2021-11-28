@@ -37,6 +37,7 @@ def clean2011data(df11, questionoption2011):
         return dfout11
 
 
+# function to clean 2012 data
 def clean2012data(df12, questionoption2012):
     """
     This is the cleaning function dedicated for the 2012 data
