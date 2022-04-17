@@ -14,7 +14,7 @@ For dataset from each year, it has three options and one input dataframe.
 The visualizationModule provides basic data visualization for each dataset.
 
 ### Statistics 
-statFunction.py summarize the cleaned datasets,
+statFunction.py summarize the cleaned datasets, performs basic statistical analysis and basic inference on the data.
 
 
 ### Project Conclusion
