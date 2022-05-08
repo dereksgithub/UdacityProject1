@@ -33,7 +33,7 @@ df19q1 = cleaningDataframes.clean2019data(df19, q1opt)
 df20q1 = cleaningDataframes.clean2020data(df20, q1opt)
 
 # perform basid statistical analysis on each combined dataframe:
-statFunction.listAvg()
+# statFunction.listAvg()
 
 visualizationModule.list_basic_viz()
 
