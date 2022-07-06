@@ -80,7 +80,7 @@ def q3_data_format(df_in, year_df, n_lang):
     res_dict_filter = lambda x, y: dict([(i, x[i]) for i in x if i in set(y)])
     lang_to_keep = ("SQL", "JavaScript", "HTML/CSS", "C", "C++", "PHP", "C#", "Python",
                     "Bash/Shell/PowerShell", "Java")
-    # filter out only the 10 results taht we need to know
+    # filter out only the 10 results that we need to know
     res_year = res_dict_filter(res_year, lang_to_keep)
     # add the year information
     res_year['Year'] = year_df

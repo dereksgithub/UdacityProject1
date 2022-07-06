@@ -9,7 +9,7 @@ def listAvg(input_col):
     """
     avg_col = pd.avg()
     # this list average salary
-    print("average " + input_col + "is: "+ avg_col)
+    print("average " + input_col + "is: " + avg_col)
     # return the calculated average
     return avg_col
 
@@ -25,7 +25,7 @@ def corr_df(df_in, column_name):
     :param column_name: the column that the user would like to use as the ref col for corr
     :return: a list of corr / col
     """
-    
+    print("this is correlation")
 
 
 
